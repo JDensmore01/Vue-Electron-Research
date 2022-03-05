@@ -2,8 +2,9 @@
   <div class="note text-start">
     <!-- Add a new Note Button -->
     <button class="mt-4 mx-3 rounded-pill">
-      <i class="fas fa-plus fs-1"></i>
+      <i class="fas fa-plus fs-4"></i>
     </button>
+
     <!-- Main note area -->
     <div class="note-header">
       <div class="noteList">
@@ -13,13 +14,7 @@
             class="d-flex align-items-center py-2 border-bottom fw-bold justify-content-between"
           >
             <span class="btn text-white">Title</span>
-            <div>
-              <input type="checkbox" class="btn-check" />
-              <label class="btn btn-outline-primary text-white me-2"
-                >Done</label
-              >
-              <button class="btn bg-danger">X</button>
-            </div>
+            <button class="btn bg-danger rounded-pill p-0 px-3">X</button>
           </li>
         </ul>
       </div>
@@ -30,6 +25,7 @@
         <button>Close Note</button>
       </div>
     </div>
+
     <!-- Note creation/edit form -->
     <div class="noteForm text-center">
       <label class="form-label">Title:</label><br />
@@ -37,7 +33,6 @@
       <label class="form-label">Description:</label>
       <textarea ref="noteDesc" class="form-control"></textarea>
       <button class="mt-3 me-3">Save</button>
-      <button>Cancel</button>
     </div>
   </div>
 </template>
@@ -63,18 +58,6 @@ export default {
 .noteForm.display {
   opacity: 1;
 }
-.noteForm * {
-  margin: 0 auto;
-}
-.noteList ul {
-  list-style: none;
-  padding: 0;
-}
-.noteList {
-  padding: 2rem;
-  width: 50%;
-  text-align: start;
-}
 .note-display {
   /* opacity: 0; */
   transition: 200ms ease;
@@ -87,6 +70,19 @@ export default {
 .note-display.display {
   opacity: 1;
 }
+.noteForm * {
+  margin: 0 auto;
+}
+.noteList ul {
+  list-style: none;
+  padding: 0;
+}
+.noteList {
+  padding: 2rem;
+  width: 50%;
+  text-align: start;
+}
+
 input[type="text"],
 textarea {
   width: 300px;
