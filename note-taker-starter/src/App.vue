@@ -1,5 +1,16 @@
 <template>
-  <div>
+  <div id="app-main">
+    <!--Dark Mode Switch-->
+    <div class="form-check form-switch darkmode-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="darkMode"
+      />
+      <label class="form-check-label" for="darkMode">Dark Mode</label>
+    </div>
+    <!--Dark Mode Switch End-->
     <h1>My Personal Notes</h1>
   </div>
 </template>
@@ -48,6 +59,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  margin-top: 60px;
+}
+#app-main {
+  padding-top: 60px;
+  perspective: 800px;
+}
+.bg-dark {
+  background: #222;
+  color: #fff;
+}
+.darkmode-switch {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 </style>

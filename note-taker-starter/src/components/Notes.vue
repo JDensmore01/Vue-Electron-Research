@@ -4,6 +4,7 @@
     <button class="my-4 mx-lg-3 rounded-pill">
       <i class="fas fa-plus fs-3"></i>
     </button>
+    <!-- Add a new Note Button End -->
     <!-- Main note area -->
     <div class="note-header ps-2 my-4">
       <div class="noteList me-lg-5 p-lg-3 mb-2">
@@ -24,8 +25,10 @@
         <button>Close Note</button>
       </div>
     </div>
+    <!-- Main note area End-->
+
     <!-- Note creation/edit form -->
-    <div class="noteForm text-center">
+    <div class="noteForm text-center mb-5">
       <label class="form-label">Title:</label><br />
       <input type="text" class="form-control" minlength="2" />
       <label class="form-label">Description:</label>
@@ -33,6 +36,7 @@
       <button class="mt-3 me-3">Save</button>
     </div>
   </div>
+  <!-- Note creation/edit form End-->
 </template>
 
 <script>
