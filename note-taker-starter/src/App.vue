@@ -1,5 +1,5 @@
 <template>
-  <div id="app-main">
+  <div id="app-main" :class="darkModeEnabled ? 'bg-dark' : ''">
     <!--Dark Mode Switch-->
     <div class="form-check form-switch darkmode-switch">
       <input
@@ -7,18 +7,29 @@
         type="checkbox"
         role="switch"
         id="darkMode"
+        @change="darkModeEnabled = !darkModeEnabled"
       />
       <label class="form-check-label" for="darkMode">Dark Mode</label>
     </div>
     <!--Dark Mode Switch End-->
     <h1>My Personal Notes</h1>
+    <myNotes />
   </div>
 </template>
 
 <script>
+  import myNotes from './components/Notes.vue';
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    myNotes
+  },
+  data() {
+    return {
+      darkModeEnabled: false
+    }
+  }
 };
 </script>
 
